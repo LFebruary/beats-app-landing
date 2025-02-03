@@ -5,6 +5,7 @@ import {
   S3Client,
   ListObjectsV2Command,
   GetObjectCommand,
+  S3ServiceException,
 } from "@aws-sdk/client-s3";
 import crypto from "crypto";
 
@@ -42,8 +43,11 @@ export async function GET(request: Request) {
         },
       });
     } catch (error) {
-      const { requestId, cfId, extendedRequestId } = error.$metadata;
-      console.log({ requestId, cfId, extendedRequestId });
+      if (error instanceof S3ServiceException) {
+        const { requestId, cfId, extendedRequestId } = error.$metadata;
+        console.log({ requestId, cfId, extendedRequestId });
+      }
+
       console.error("Error fetching audio file:", error);
       return NextResponse.json(
         { error: "Failed to fetch audio file" },
