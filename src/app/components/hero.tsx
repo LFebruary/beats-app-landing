@@ -97,7 +97,10 @@ export default function Hero() {
             onMouseEnter={() => setHoverBeat(true)}
             onMouseLeave={() => setHoverBeat(false)}
           >
-            <Link href="/" className="text-red-600 font-semibold relative z-10">
+            <Link
+              href="/"
+              className={`text-red-600 font-semibold relative z-10 ${lacquer.className}`}
+            >
               beat.ouens.club
             </Link>
             <motion.span
@@ -116,7 +119,9 @@ export default function Hero() {
             onMouseEnter={() => setHoverGevaarlik(true)}
             onMouseLeave={() => setHoverGevaarlik(false)}
           >
-            <span className="text-red-600 font-semibold relative z-10">
+            <span
+              className={`text-red-600 font-semibold relative z-10 ${lacquer.className}`}
+            >
               are kak gevaarlik
             </span>
             <motion.span

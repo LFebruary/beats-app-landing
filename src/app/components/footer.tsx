@@ -1,6 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
+import { Lacquer } from "next/font/google";
+
+const lacquer = Lacquer({
+  weight: "400",
+  subsets: ["latin"],
+  preload: true,
+});
 
 export default function Footer() {
   return (
@@ -12,7 +19,7 @@ export default function Footer() {
     >
       <div className="container mx-auto text-center">
         <motion.p
-          className="text-lg font-bold mb-4 text-white w-full"
+          className={`text-lg font-bold mb-4 text-white w-full ${lacquer.className}`}
           whileHover={{ fontSize: 32 }}
         >
           It's gonna be nxa
