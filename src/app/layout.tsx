@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import React from "react";
-import Favicon from "@/app/components/favicon";
 
 const outfit = Outfit({ subsets: ["latin"] });
 

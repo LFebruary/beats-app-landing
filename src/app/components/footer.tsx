@@ -22,7 +22,7 @@ export default function Footer() {
           className={`text-lg font-bold mb-4 text-white w-full ${lacquer.className}`}
           whileHover={{ fontSize: 32 }}
         >
-          It's gonna be nxa
+          It&apos;s gonna be nxa
         </motion.p>
         <p className="text-sm text-white/80">
           © {new Date().getFullYear()} beat.ouens.club by Lyle February
