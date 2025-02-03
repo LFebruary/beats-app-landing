@@ -3,7 +3,6 @@ import Features from "./components/features";
 import Hero from "./components/hero";
 import Footer from "./components/footer";
 import FullScreenLayout from "@/app/components/full-screen-layout";
-import AudioPlayer from "@/app/components/audio-player";
 
 export default function LandingPage() {
   return (
